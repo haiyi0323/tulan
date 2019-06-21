@@ -1,0 +1,98 @@
+@media screen and (max-width: 980px) { 
+    
+    aside{
+        display: none;
+    }
+    section{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .navtop{display: block;}
+    .new-tit{
+        margin-top: 10px;
+    }
+    }  
+    
+    @media screen and (max-width: 780px) { 
+        
+        .fewfgh{
+             
+            display: block;
+            float: none;
+            margin: 10px 0px;
+            font-size: 12px;
+        }
+        .gijpjg{
+            font-size: 18px;
+        }
+      .liuyan .fsgg{
+            margin:30px 0px 10px;
+        }
+       .liuyan .liuygran{
+            padding: 0px;
+        }
+        .liuygran .tyjtyhrt{
+            width: 100%;
+        }
+        .ghehyr .ffsaeh{
+            width: 78%;
+        }
+       .liuygran .jopjopi{
+            text-align: right;
+            height: 80px;
+        }
+       .jopjopi .disibt{
+           position: absolute;
+           top: 0px;
+           left: 60px;
+
+           
+        }
+        .jopjopi .gasghhj{
+            position: absolute;
+           top: 0px;
+           left: calc(70% - 60px);
+        }
+        .jopjopi .ghjjkjk{
+            width: 90%;
+            position: absolute;
+            top: 60px;
+            left: 60px;
+        }
+        
+    }
+   
+    
+        @media screen and (max-width: 440px) { 
+       
+            .erde{
+                font-size: 18px;
+            }
+            .agjjejw .fjrhja{padding-bottom: 0px;}
+            .ffeddww{display: none;}
+            #dituContent{height: 200px;}
+            .fewfgh{font-size: 13px;}
+           section .gijpjg{
+                padding: 20px 10px;
+                font-size: 16px;
+            }
+            .liuyan .erde{
+                font-size: 14px;
+            }
+            .tyjtyhrt .joijwwfgh{
+                width: calc(92% - 50px );
+            }
+        .ghehyr .ffsaeh{
+            width: 70%;
+        }
+        .jopjopi .gasghhj{
+          left:   calc(70% - 30px);
+        }
+        .jopjopi .ghjjkjk{
+            width: 80%;
+        }
+        .aboutnr2{
+            display: flex;
+        }
+        
+                }     

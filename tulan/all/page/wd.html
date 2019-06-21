@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ 
+   
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .wrap {
+        width: 100%;
+        background: rgb(255, 255, 255);
+      }
+      .userxx {
+        border-bottom: 1px solid black;
+        padding: 20px 20px 0px;
+        position: relative;
+      }
+      .headimg {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 6px solid rgb(238, 238, 238);
+        margin-left: 50px;
+      }
+      .headimg img {
+        width: 150%;
+      }
+      .username {
+        font-weight: bold;
+        position: absolute;
+        top: 40px;
+        left: 200px;
+      }
+      .dz {
+        width: 100%;
+        height: 40px;
+        border-top: 1px solid black;
+        margin-top: 10px;
+        line-height: 40px;
+      }
+      .wddz {
+        float: right;
+        margin-right: 50px;
+      }
+      .content {
+        width: 100%;
+        font-size: 0px;
+        min-height: 600px;
+      }
+      .qita {
+        width: calc(15% - 1px);
+        min-height: 650px;
+        display: inline-block;
+
+        border-right: 1px solid black;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .jiemian {
+        width: calc(85% - 60px);
+        padding: 20px;
+        display: inline-block;
+        border-bottom: 1px solid black;
+        vertical-align: top;
+        font-size: 18px;
+        min-height: 650px;
+      }
+      .xymcon {
+        width: calc(85% - 60px);
+        padding: 0px 20px;
+        display: inline-block;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        vertical-align: top;
+        font-size: 18px;
+     
+      }
+      ul div {
+        padding: 10px 0px;
+        text-align: center;
+        height: 40px;
+     
+        border-bottom: 1px solid black;
+      }
+      .chon {
+        width: 9.9%;
+        height: 50px;
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 10px;
+        line-height: 40px;
+        display: inline-block;
+        text-align: center;
+        background-color: rgb(255, 96, 96);
+        margin: 0.85%;
+        cursor: pointer;
+      }
+      .chon div {
+        width: 100%;
+        height: 60%;
+        line-height: 30px;
+        color: white;
+      }
+      .chon div:nth-child(2) {
+        font-size: 14px;
+        line-height: 20px;
+        height: 40%;
+      }
+      .llss {
+        font-weight: bold;
+        position: absolute;
+        left: 200px;
+        bottom: 65px;
+      }
+      .llss span {
+        color: rgb(255, 96, 96);
+      }
+      .zxcc {
+        padding: 15px;
+      }
+      .zxcc p {
+        font-weight: bold;
+        margin: 10px 0px;
+        display: inline-block;
+      }
+      .zxcc span {
+        margin-left: 20px;
+        font-size: 16px;
+      }
+      .zxcc :nth-child(3) {
+        width: 30%;
+        height: 40px;
+        font-size: 22px;
+      }
+      button {
+        width: 120px;
+        height: 40px;
+        background: black;
+        color: gold;
+        font-size: 20px;
+        border: none;
+        display: inline-block;
+        margin: 0px 60px;
+      }
+      .zfimg {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        vertical-align: middle;
+        margin-right: 30px;
+      }
+      .zfimg img {
+        width: 100%;
+      }
+      .dfwerw {
+        margin-left: 5px;
+        display: block;
+      }
+      .qita div:hover {
+        background: rgb(97, 97, 97);
+        color: white;
+      }
+
+      /* .acticeee{
+            background: rgb(97, 97, 97);
+            color: white;
+        } */
+      .fk {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 40px;
+        border-right: 1px solid red;
+      }
+      .fk span {
+        color: rgb(255, 110, 110);
+      }
+      .fka {
+        position: absolute;
+        left: 450px;
+        top: 40px;
+        font-size: 0px;
+      }
+      .fk:first-child {
+        border-left: 1px solid red;
+      }
+      .xiaoxi {
+        position: absolute;
+        top: 40px;
+        right: 50px;
+      }
+      /* wdxx */
+
+     
+      /* cjgl */
+      .cjgl_wrap {
+        width: 100%;
+     
+        font-size: 20px;
+       
+      }
+
+      .cjgl {
+        float: right;
+        margin-right: 30px;
+      }
+
+
+      /* 购物车样式 */
+      .jian  {
+        width: 30px;
+        height: 30px;
+        margin: 0px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+      }
+      .jianshunun{
+        color: rgb(250, 85, 85);
+        margin: 0px 10px;
+        font-size: 20px;
+      }
+      .jia_gouwu{
+        width: 30px;
+        height: 30px;
+        margin: 0px;
+        position: absolute;
+        top: 40%;
+        left: 45%;
+      }
+      
+      .ddfeiowo_gg{
+
+      }
+      .dfdfrwgyjl{
+        text-align: right;
+      }
+      .fweioa{
+        margin: 10px;
+        margin-right: 30px;
+      }
+      .jiewn_dfji{
+        display: inline-block;
+      }
+
+
+      .gc_title{
+            text-align: center;
+            margin: 20px;
+            font-size: 26px;
+        }
+        .xq_wrap{
+            width: 100%;
+            border: 1px solid black;
+            border-bottom: none;
+            padding: 10px;
+            position: relative;
+        }
+        .xq_wrap img{
+            width: 10%;
+        }
+        .xqfs18{
+            font-size: 22px;
+            font-weight: bold;
+            margin: 7px 0px;
+            display: inline-block;
+            position: absolute;
+            top: 10%;
+            left: 15%;
+        }
+        .xq-more{
+          display: inline-block;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    font-size: 17px;
+        }
+    
+        .xaqred{
+            color: #666666;
+            margin: 0px 20px;
+        }
+        .fweioow{
+            font-size: 24px;
+            font-weight: bold;
+            /* position: absolute;
+            right: 20%; */
+            margin: 0px 20px;
+        }
+        .agjoiwwe{
+            position: absolute;
+            top: 70%;
+            left: 15%;
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+        }
+        .dfadseree{
+            position: absolute;
+            top: 45%;
+            font-size: 24px;
+            right:10% ;
+        }
+        .dooppepres{
+            position: absolute;
+            width: 6%;
+            height: 40px;
+            font-size: 22px;
+            top: 75%;
+            right: 5%;
+            background: black;
+            color: gold;
+            border: none;
+          
+        }
+        .qita_dugn{
+          cursor: pointer;
+        }
+        .dooppepreds{
+          color: green;
+    font-size: 18px;
+    display: inline-block;
+    position: absolute;
+    right: 9.5%;
+    top: 68%;
+    text-align: left;
+    width: 100px;
+        }
+
+        /* wdxxx */
+        .xym {
+        width: 100%;
+        margin: 20px auto;
+      
+        position: relative;
+        font-size: 22px;
+      }
+      .wdxx {
+        font-size: 20px;
+        text-align: center;
+        height: 60px;
+        line-height: 60px;
+        border-bottom: 1px solid black;
+      }
+      .bianji {
+        color: blue;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+      }
+      .x_headimg {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 6px solid rgb(238, 238, 238);
+        position: absolute;
+        right: 60px;
+        top: 20%;
+      }
+      .ds {
+        display: inline-block;
+      }
+      .vt {
+        vertical-align: top;
+      }
+      .linekai {
+        border-bottom: 1px solid black;
+        position: relative;
+        padding: 15px 30px;
+        min-height: 60px;
+      }
+      .linekai input {
+        width: 300px;
+        height: 40px;
+        position: absolute;
+        right: 35px;
+        top: 20%;
+      }
+      .linekai select {
+        width: 100px;
+        height: 30px;
+        position: absolute;
+        right: 35px;
+      }
+      .baocun {
+        width: 130px;
+        height: 40px;
+        margin-left: 100px;
+        margin: 30px;
+      }
+
+
+
+      /*  */
+      .usernameee ,.jiowjewww ,.dfwerg{
+          display: inline-block;
+          position: absolute;
+          right: 60px;
+      }.sdfafgadf{
+        font-size: 30px;
+        width: 100%;
+      }
+      .disb{
+        display: none;
+      }
+      .dsfseweg{
+        width: 300px;
+        height: 40px;
+        position: absolute;
+        right: 65px;
+        top: 20%
+      }
+      .dsdssbtn{
+        width: 120px;
+        height: 40px;
+        font-size: 26px;
+        background: black;
+        color: gold;
+        border: none;
+        margin: 20px auto;
+      
+      }.xym {
+        width: 100%;
+        margin: 20px auto;
+        border: 1px solid black;
+        border-bottom: none;
+        position: relative;
+        font-size: 22px;
+      }
+      .wdxx {
+        font-size: 20px;
+        text-align: center;
+        height: 60px;
+        line-height: 60px;
+        border-bottom: 1px solid black;
+      }
+      .bianji {
+        color: blue;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+      }
+      .x_headimg {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 6px solid rgb(238, 238, 238);
+        position: absolute;
+        right: 60px;
+        top: 20%;
+      }
+      .ds {
+        display: inline-block;
+      }
+      .vt {
+        vertical-align: top;
+      }
+      .linekai {
+        border-bottom: 1px solid black;
+        position: relative;
+        padding: 15px 30px;
+        min-height: 60px;
+      }
+      .linekai input {
+        width: 300px;
+        height: 40px;
+        position: absolute;
+        right: 35px;
+        top: 20%;
+      }
+      .linekai select {
+        width: 100px;
+        height: 30px;
+        position: absolute;
+        right: 35px;
+        top: 20%;
+      }
+      .baocun {
+        width: 130px;
+        height: 40px;
+        margin-left: 100px;
+        margin: 30px;
+      }
+
+
+
+      /*  */
+      .usernameee ,.jiowjewww ,.dfwerg{
+          display: inline-block;
+          position: absolute;
+          right: 60px;
+          top: 20px;
+      }.sdfafgadf{
+        font-size: 30px
+      }
+      .disb{
+        display: none;
+      }
+      .dsfseweg{
+        width: 300px;
+        height: 40px;
+        position: absolute;
+        right: 65px;
+        top: 20%
+      }
+      .dsdssbtn{
+        width: 120px;
+        height: 40px;
+        font-size: 26px;
+        background: black;
+        color: gold;
+        border: none;
+        margin: 20px auto;
+      
+      }
+      .jifwwor{
+        color: rgb(250, 85, 85);
+    margin: 0px 10px;
+    font-size: 20px;
+}
+      
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="userxx">
+        <div class="headimg">
+          <img src="../img/jj.jpg" alt="" />
+        </div>
+        <div class="username">还没想好名字呢？</div>
+        <div class="llss">衣币余额：<span id="wodeyibi">00000</span></div>
+        <div class="fka">
+          <div class="fk">代付款：<span>5</span></div>
+          <div class="fk">待发货：<span>5</span></div>
+          <div class="fk">代收货：<span>5</span></div>
+          <div class="fk">代评价：<span>5</span></div>
+          <div class="fk">退款：<span>5</span></div>
+        </div>
+        <div class="xiaoxi">退出登录</div>
+        <div class="dz">
+          当前收货信息:
+          <div class="wddz">名字-电话-这里写你的地址xx市-xx县—xx村</div>
+        </div>
+      </div>
+      <div class="content">
+        <ul class="qita">
+          <div class=" qita_dugn more">返回首页</div>
+          <div class=" qita_dugn chongzhi1">衣币充值</div>
+          <div class=" qita_dugn shopcar">购物车</div>
+          <div class=" qita_dugn like">我的评价</div>
+          <div class=" qita_dugn dingdan">我的订单</div>
+          <div class=" qita_dugn chaoji">超级管理员</div>
+          <div class=" qita_dugn more">我的信息</div>
+        </ul>
+        <div class="jiemian">
+          <div class="conon">
+            <div class="chon">
+              <div>100衣币</div>
+              <div>99RMB</div>
+            </div>
+            <div class="chon">
+              <div>500衣币</div>
+              <div>480RMB</div>
+            </div>
+            <div class="chon">
+              <div>900衣币</div>
+              <div>818RMB</div>
+            </div>
+            <div class="chon">
+              <div>1520衣币</div>
+              <div>1450RMB</div>
+            </div>
+            <div class="chon">
+              <div>2000衣币</div>
+              <div>1900RMB</div>
+            </div>
+            <div class="chon">
+              <div>2500衣币</div>
+              <div>2300RMB</div>
+            </div>
+            <div class="chon">
+              <div>3000衣币</div>
+              <div>2700RMB</div>
+            </div>
+            <div class="chon">
+              <div>4000衣币</div>
+              <div>3500RMB</div>
+            </div>
+          </div>
+          <div class="zxcc">
+            <p style="font-size: 26px">自行充值</p>
+            <br />
+            <input type="text" id="zixingchongzhi" /><span>(单位:元)</span>
+
+            <button id="chongzhile">充值</button>
+            <p>充值方式</p>
+            <input name="sdsfwe" type="radio" id="an1" value="支付宝" />
+            <label class="zfimg" for="an1"
+              ><img src="../img/zfb.png" alt=""
+            /></label>
+            <input name="sdsfwe" type="radio" id="an2" value="微信" />
+            <label class="zfimg" for="an2"
+              ><img src="../img/wx.png" alt=""
+            /></label>
+            <input name="sdsfwe" type="radio" id="an3" value="银联" />
+            <label class="zfimg" for="an3"
+              ><img src="../img/5656.jpg" alt=""
+            /></label>
+            <div class="dfwerw">1衣币 = 1元</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+     var num = parseInt(localStorage.nowuseing);
+        var usell = JSON.parse(localStorage.userl);
+    var  username =document.getElementsByClassName("username")[0];
+    username.innerText = usell[num].email
+var wodeyibi = document.getElementById("wodeyibi");
+wodeyibi.innerText = usell[num].zongbi
+
+// wddz 
+    var wddz = document.getElementsByClassName('wddz')[0]
+    wddz.innerText = usell[num].more[3]
+    var xiaoxi =document.getElementsByClassName("xiaoxi")[0];
+    xiaoxi.onclick=function(){
+      localStorage.removeItem("nowuseing");
+      alert("退出成功")
+      setTimeout(function(){
+        window.location.href="../../index.html"
+      },1000)
+    }
+ 
+    // 自定义金额
+    var zixing = document.getElementById("zixingchongzhi");
+
+    zixing.onblur = function() {
+      var zixingjine = zixing.value;
+      var reg = /^[1-9]\d{2,3}$/;
+      var fsfsf = reg.test(zixingjine);
+      if (zixingjine == "") {
+        alert("请输入金额");
+      } else if (!fsfsf) {
+        zixing.value = "";
+        alert("您输入的格式不正确，请输入0-9的数字，最大一次性充值9999元");
+      }
+    };
+
+    // 判断用什么支付；
+    var sdsfwe = document.getElementsByName("sdsfwe");
+    var chongzhile = document.getElementById("chongzhile");
+
+    chongzhile.onclick = function() {
+      for (var i = 0; i < sdsfwe.length; i++) {
+        if (sdsfwe[i].checked) {
+          var zffs = sdsfwe[i].value;
+        }
+      }
+      // 如果没选择用什么来支付
+      if (!sdsfwe[0].checked && !sdsfwe[1].checked && !sdsfwe[2].checked) {
+        alert("请先选择支付方式");
+        return;
+      }
+      // 如果值不正确
+      var reg = /^[1-9]\d{2,3}$/;
+      if (reg.test(zixing.value)) {
+        alert("您将通过" + zffs + "付款" + zixing.value + "元");
+        var num = parseInt(localStorage.nowuseing);
+        var usell = JSON.parse(localStorage.userl);
+        // var sdfsdf = usell[num];
+        // console.log( usell[num]);
+        if (usell[num].yibi) {
+          usell[num].yibi.push([zixing.value, zffs]);
+        } else {
+          var yibi = [[zixing.value, zffs]];
+          usell[num].yibi = yibi;
+          // sdfsdf == usell[num]
+        }
+        localStorage.userl = JSON.stringify(usell);
+        // console.log( localStorage.userl)
+      }
+      if(usell[num].yibi){
+        yibiaaa();
+    }
+    }
+// 
+
+    // 总衣币计算
+    
+    function yibiaaa() {
+      var num = parseInt(localStorage.nowuseing);
+      var usell = JSON.parse(localStorage.userl);
+      var quanbucz = 0;
+      for (var i = 0; i < usell[num].yibi.length; i++) {
+        var dancicz = usell[num].yibi[i][0];
+        quanbucz += Number(dancicz);
+      }
+      wodeyibi.innerText = quanbucz;
+      console.log(quanbucz);
+      //  if(usell[num].zongbi){
+
+      //         }else{
+      var zongbi = quanbucz;
+      usell[num].zongbi = zongbi;
+      // sdfsdf == usell[num]
+      // }
+      console.log(usell);
+
+      localStorage.userl = JSON.stringify(usell);
+      
+    }
+    
+    
+   
+
+    //  快速充值
+    var chon = document.getElementsByClassName("chon");
+
+    chon[0].onclick = function() {
+      var num = parseInt(localStorage.nowuseing);
+      var usell = JSON.parse(localStorage.userl);
+      var yibijin_ = parseInt(chon[0].children[0].innerText);
+      var shiji_ = parseInt(chon[0].children[1].innerText);
+      zixing.value = yibijin_;
+      alert("您将通过活动冲" + shiji_ + "得" + yibijin_);
+      usell[num].yibi.push([zixing.value, "活动充值"]);
+    };
+    chon[1].onclick = function() {
+      var num = parseInt(localStorage.nowuseing);
+      var usell = JSON.parse(localStorage.userl);
+      var yibijin_ = parseInt(chon[1].children[0].innerText);
+      var shiji_ = parseInt(chon[1].children[1].innerText);
+      zixing.value = yibijin_;
+      alert("您将通过活动冲" + shiji_ + "得" + yibijin_);
+      usell[num].yibi.push([zixing.value, "活动充值"]);
+    };
+    chon[2].onclick = function() {
+      var num = parseInt(localStorage.nowuseing);
+      var usell = JSON.parse(localStorage.userl);
+      var yibijin_ = parseInt(chon[2].children[0].innerText);
+      var shiji_ = parseInt(chon[2].children[1].innerText);
+      zixing.value = yibijin_;
+      alert("您将通过活动冲" + shiji_ + "得" + yibijin_);
+      usell[num].yibi.push([zixing.value, "活动充值"]);
+    };
+    chon[3].onclick = function() {
+      var num = parseInt(localStorage.nowuseing);
+      var usell = JSON.parse(localStorage.userl);
+      var yibijin_ = parseInt(chon[3].children[0].innerText);
+      var shiji_ = parseInt(chon[3].children[1].innerText);
+      zixing.value = yibijin_;
+      alert("您将通过活动冲" + shiji_ + "得" + yibijin_);
+      usell[num].yibi.push([zixing.value, "活动充值"]);
+    };
+    chon[4].onclick = function() {
+      var num = parseInt(localStorage.nowuseing);
+      var usell = JSON.parse(localStorage.userl);
+      var yibijin_ = parseInt(chon[4].children[0].innerText);
+      var shiji_ = parseInt(chon[4].children[1].innerText);
+      zixing.value = yibijin_;
+      alert("您将通过活动冲" + shiji_ + "得" + yibijin_);
+      usell[num].yibi.push([zixing.value, "活动充值"]);
+    };
+    chon[5].onclick = function() {
+      var num = parseInt(localStorage.nowuseing);
+      var usell = JSON.parse(localStorage.userl);
+      var yibijin_ = parseInt(chon[5].children[0].innerText);
+      var shiji_ = parseInt(chon[5].children[1].innerText);
+      zixing.value = yibijin_;
+      alert("您将通过活动冲" + shiji_ + "得" + yibijin_);
+      usell[num].yibi.push([zixing.value, "活动充值"]);
+    };
+    chon[6].onclick = function() {
+      var num = parseInt(localStorage.nowuseing);
+      var usell = JSON.parse(localStorage.userl);
+      var yibijin_ = parseInt(chon[6].children[0].innerText);
+      var shiji_ = parseInt(chon[6].children[1].innerText);
+      zixing.value = yibijin_;
+      alert("您将通过活动冲" + shiji_ + "得" + yibijin_);
+      usell[num].yibi.push([zixing.value, "活动充值"]);
+    };
+    chon[7].onclick = function() {
+      var num = parseInt(localStorage.nowuseing);
+      var usell = JSON.parse(localStorage.userl);
+      var yibijin_ = parseInt(chon[7].children[0].innerText);
+      var shiji_ = parseInt(chon[7].children[1].innerText);
+      zixing.value = yibijin_;
+      alert("您将通过活动冲" + shiji_ + "得" + yibijin_);
+      usell[num].yibi.push([zixing.value, "活动充值"]);
+    };
+    // 列表
+    var qita_dugn = document.getElementsByClassName("qita_dugn");
+    // for(var j = 0;j <qita_dugn.length;j++ ){
+    //     qita_dugn[j].style.backgroundColor = "white"
+    // }
+    // for(var i = 0;i < qita_dugn.length;i++){
+    //     qita_dugn[i].onclick = function () {
+    //    `    this.style.backgroundColor = "red"
+    //     }
+
+    // }
+  </script>
+
+  <script src="../js/kzt.js"></script>
+  <!-- <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+  包含了所有编译插件
+  <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+</html>

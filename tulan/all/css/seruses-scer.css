@@ -1,0 +1,43 @@
+@media screen and (max-width: 980px) { 
+    
+    aside{
+        display: none;
+    }
+    section{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .navtop{display: block;}
+    
+    }  
+    @media screen and (max-width: 720px) { 
+        
+       
+        .fewfgh{
+             
+            display: block;
+            float: none;
+            margin: 10px 0px;
+            font-size: 12px;
+        }
+     }  
+        @media screen and (max-width: 440px) { 
+        .spbox{
+            display: inline-block;
+            width: 46%;
+            padding: 0px 2%;
+        }
+        .spbox img{
+            width: 100%;
+        }
+        .qbsp{
+           padding: 0px;
+            display: block;     
+        }
+        #jijowdff{
+            border-radius: 10px;
+           
+        }
+         
+                
+                }     

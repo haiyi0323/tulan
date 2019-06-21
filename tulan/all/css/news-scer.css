@@ -1,0 +1,58 @@
+@media screen and (max-width: 980px) { 
+    
+    aside{
+        display: none;
+    }
+    section{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .navtop{display: block;}
+    
+    }  
+    @media screen and (max-width: 720px) { 
+        
+        .fewfgh{
+             
+            display: block;
+            float: none;
+            margin: 10px 0px;
+            font-size: 12px;
+        }
+    }
+        @media screen and (max-width: 440px) { 
+       
+            .fewfgh{font-size: 13px;}
+            .new-img{
+                
+                width: 30%;
+            }
+          .nwe-lb{
+              overflow: hidden;
+          }
+          .faerhj{
+              width: 50%;
+              float: right;
+          }
+          .fehhas{
+              width:100%;
+              display: inline-block;
+              overflow: hidden;
+              font-size: 14px;
+              height: 16px;
+          }
+          .erdee{
+              display: none;
+          }
+          .time {
+              display: none;
+          }
+          .faerhj{
+            width:60%;
+              float: none;
+              margin-left: 5%
+          }
+          .new-tit{
+              margin-top: 30px;
+          }
+                }     

@@ -1,0 +1,60 @@
+@media screen and (max-width: 980px) { 
+    
+    aside{
+        display: none;
+    }
+    section{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .navtop{display: block;}
+    .new-tit{
+        margin: 20px;
+    }
+    
+    }  
+    @media screen and (max-width: 720px) { 
+        
+       .new-tit{
+           margin: 10px;
+       }
+        .fewfgh{
+            display: block;
+                float: none;
+                margin: 10px 0px;
+                font-size: 12px;
+        }
+    }
+    .zpbt, .zpbt2, .zpbt3, .zpbt4, .zpbt5, .zpbt6 {
+        width: 100%;
+        padding-left: 5%;
+        margin-left: 5%;
+        padding: 15px;
+        height: 30px;
+        background: url(../img/jia.png) no-repeat;
+        background-position: 90% center;
+        background-size: 15px;
+        border-bottom: 1px dotted #898989;
+     }  
+        @media screen and (max-width: 440px) { 
+        
+         .slide label{
+             display: none;
+         }
+         .jiopaaeee p{
+             font-size: 14px;
+         }
+         .faghttw{margin-right: 20%;}
+         .zpbt , .zpbt2 , .zpbt3 , .zpbt4 , .zpbt5 , .zpbt6{background-position: 85% center;}
+         .joijogruhaad ,.joijogruhaad2 ,.joijogruhaad3 ,.joijogruhaad4 ,.joijogruhaad5 ,.joijogruhaad6{
+             margin-left: 4%;
+         }
+         .gfsthjsh{font-size: 16px;}
+         .faghttw{font-size: 16px;}
+         #dweade{padding-left: calc((100% - 28px)/2)}
+         #tttsaf{padding-left: calc((100% - 28px)/2)}
+         .zhaopin {margin-bottom: 30px}
+         .all{padding: 0px 10px}
+         .fjoiweihuhg{overflow: hidden;}
+         .fjoiweihuhg:hover{background: url(../img/hongkuai.png)}
+                }     

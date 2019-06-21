@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 800px;
+            margin: 20px auto;
+            border:1px solid black;
+            text-align: center;
+        }
+        .new_p{display: inline-block;width: 100px;text-align:right}
+        .new_input{
+            width: 300px;
+            height: 40px;
+        }
+        .new_p1{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .new_button{
+            width: 100px;
+            height: 35px;
+            margin: 5px 200px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+            <p class="new_p1">新增新闻</p>
+            <p class="new_p">标题:</p><input type="text" class="new_input new_pl"><br>
+            <p class="new_p">作者:</p><input type="text"class="new_input new_pl"><br>
+            <p class="new_p">图片数量:</p><input  type="text"class="new_input new_pl"><br>
+            <p class="new_p">图片地址:</p><textarea class="new_pl"name="ds" id="sdd" cols="30" rows="10" placeholder="输入图片链接用, 逗号隔开第一张作为主图">
+
+                </textarea><br>
+            <p class="new_p">详情文字:</p><textarea class="new_pl" name="ds" id="sdd" cols="30" rows="10"placeholder="输入每段文字用, 逗号隔开">
+
+                </textarea><br>
+            
+            
+            <button class="new_button"> 发布</button>
+    </div>
+
+    
+</body>
+    <script>
+        var new_button = document.getElementsByClassName("new_button")[0];
+        
+        new_button.onclick = function () {
+            var new_pl = document.getElementsByClassName("new_pl");
+            var picsrc = new_pl[3].value;
+           var imgsrc= picsrc.split("，")
+           var writes = new_pl[4].value;
+           var writes= writes.split("\n")
+           
+            var news = {
+                title:new_pl[0].value,
+                zuozhe:new_pl[1].value,
+                picnum:new_pl[2].value,
+                imgsrc:imgsrc,
+                writes:writes,
+                time:time,
+            }
+            console.log(news)
+
+            if(localStorage.news){
+              var  subnew = JSON.parse(localStorage.news)
+              subnew.unshift(news)
+              localStorage.news = JSON.stringify(subnew)
+            }else{
+                var neww = []
+                neww.unshift(news)
+                localStorage.news = JSON.stringify(neww)
+         
+            }
+
+        }
+
+
+
+
+
+        // var subbut = documetn.getElementsByClassName("new_button")[0]
+        // subbut.onclick=function()
+        // {
+
+        // }
+        function CurentTime()
+    { 
+        var now = new Date();
+        
+        var year = now.getFullYear();       //年
+        var month = now.getMonth() + 1;     //月
+        var day = now.getDate();            //日
+        
+        var hh = now.getHours();            //时
+        var mm = now.getMinutes();          //分
+        var ss = now.getSeconds();           //秒
+        
+        var clock = year + "-";
+        
+        if(month < 10)
+            clock += "0";
+        
+        clock += month + "-";
+        
+        if(day < 10)
+            clock += "0";
+            
+        clock += day + " ";
+        
+        if(hh < 10)
+            clock += "0";
+            
+        clock += hh + ":";
+        if (mm < 10) clock += '0'; 
+        clock += mm + ":"; 
+         
+        if (ss < 10) clock += '0'; 
+        clock += ss; 
+        return(clock); 
+}
+var time = CurentTime();
+
+    
+    </script>
+</html>

@@ -1,0 +1,46 @@
+@media screen and (max-width: 980px) { 
+    
+aside{
+    display: none;
+}
+section{
+    width: 100%;
+    margin-left: 0px;
+}
+.navtop{display: block;}
+
+}  
+@media screen and (max-width: 720px) { 
+    
+.smbox{
+    width: 100%;
+    margin:  10px 0px;
+}
+.fewfgh{
+    display: block;
+    float: none;
+    margin: 10px 0px;
+    font-size: 12px;
+}
+.faaef{
+    font-size: 14px;
+}
+.jighaf{
+    border: none;
+}
+    
+ }  
+    @media screen and (max-width: 440px) { 
+    
+        .xcc1{
+            width: 100%;
+        }
+        .xcc2{
+            width: 100%;
+            border: none;
+        }
+        .lunbo label{
+            display: none;
+        }
+            
+            }     

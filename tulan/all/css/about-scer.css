@@ -1,0 +1,50 @@
+@media screen and (max-width: 980px) { 
+    
+    aside{
+        display: none;
+    }
+    section{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .navtop{display: block;}
+    
+    }  
+    @media screen and (max-width: 720px) { 
+        
+       
+        .fewfgh{
+             
+            display: block;
+            float: none;
+            margin: 10px 0px;
+            font-size: 12px;
+        }
+     }  
+        @media screen and (max-width: 440px) { 
+       
+         .aboutt{width: 100%;}
+         .aboutp{width: calc(100% - 20px);}
+         .fhhfghj{width: 100%;}
+         .dsfhg{width: calc(100% - 20px);padding: 7% 10px}
+         .tit{margin-top: 15px;}
+         .wd {font-size: 40px}
+         .sand{font-size: 30px;}
+         .erde{font-size: 12px}
+         .erdd{font-size: 14px;}
+         .fewfgh{font-size: 14px; }
+         .aboutnr2{display: flex;
+                    flex-flow: wrap;
+        }
+        .about-tp1{order: 1}
+        .about-wz1{order: 2}
+        .about-tp2{order: 3}
+        .about-wz2{order: 4}
+        .about-tp3{order: 5}
+        .about-wz3{order: 6}
+        .about-tp4{order: 7}
+        .about-wz4{order: 8}
+
+
+         
+                }     

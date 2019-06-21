@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在线留言 TL·图兰</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" media="all and (max-width:960px) " href="../css/massesonlin-scer.css">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/massesonlin.css">
+
+    <!--引用百度地图API-->
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+
+</head>
+<body>
+ <script src="../js/bd.js"></script>
+        <div class="all">
+                <aside>
+                    <img class="dfewwa" src="../img/logo.jpg" alt="">
+                    <ul class="index-dh">
+        
+                        <li>
+                            <p style=" color: #d8ad76 ;font-size: 1.5rem; width: 100px;margin-left: 50px; margin-bottom: 20px;padding-bottom: 15px;border-bottom: #d8ad76 solid 1px">
+                                <a class="efghh " href="../../index.html">首页</a>
+                            </p>
+                        </li>
+                        <li>
+        
+                            <div class="mask">
+                                SHOW
+                            </div>
+        
+                            <a href="shows.html" class="lianjie">秀场</a>
+                            <div class="fr mask1"></div>
+                        </li>
+                        <li>
+                            <div class="mask">
+                                SERUES
+                            </div>
+                            <a href="seruses.html" class="lianjie">产品系列</a>
+                            <div class="fr mask1"></div>
+                        </li>
+                        <li>
+                            <div class="mask">
+                                SHOP
+                            </div>
+                            <a href="shops.html" class="lianjie">店铺</a>
+                            <div class="fr mask1"></div>
+                        </li>
+                        <li>
+                            <div class="mask">
+                                NEWS
+                            </div>
+                            <a href="news.html" class="lianjie">新闻</a>
+                            <div class="fr mask1"></div>
+                        </li>
+                        <li>
+                            <div class="mask">
+                                ABOUT US
+                            </div>
+                            <a href="about.html" class="lianjie">关于我们</a>
+                            <div class="fr mask1"></div>
+                        </li>
+                        <li>
+        
+                            <div class="mask">
+                                JOIN US
+                            </div>
+                            <a href="joinwe.html" class="lianjie">加入我们</a>
+                            <div class="fr mask1"></div>
+                        </li>
+                        <li>
+                            <div class="mask">
+                                CONTACT US
+                            </div>
+                            <a href="massesonlin.html" class="lianjie">在线留言</a>
+                            <div class="fr mask1"></div>
+                        </li>
+        <li id="aside_wd">
+                    <div class="mask" id="sdfsdeww">
+                        LOGIN
+                    </div>
+                    <a id = "aside_dd" href="all/page/login.html" class="lianjie" >登录</a>
+                    <div class="fr mask1"></div>
+                </li>
+        
+                    </ul>
+                    <div class="kpww">
+                        <img src="../img/gfwx.jpg" alt="" width="100%">
+        
+                    </div>
+                    <p>
+                        关注我们的微信
+                    </p>
+        
+                    <p class="fwwfe">
+                         
+                    </p>
+                </aside>
+        
+                <section>
+                     <div class="navtop">                             <div class=" disib hei fw tc grrrgg mrbb " >图兰简芮                                  </div>
+                         <div class="fl disib"><img src="../img/logo.jpg" alt="" width="100px">        </div>
+                        <label for="cddd" class="button disib
+                        ">
+                            <img src="../img/menu.png" alt="">
+                        </label>
+                        <input type="radio" name=" cjio" id="cddd" class="fefef">
+                        <input type="radio" name=" cjio" id="cddp" class="fefef">
+                        <div class="bagmask">
+                            <label for="cddp" class="fewww">
+                                <img src="..//img/cha.png" alt="" width="30px">
+                            </label>
+                            <div class="smask">
+                                <a href="../../index.html">首页</a><br>
+                                <a href="shows.html">秀场视频</a><br>
+                                <a href="seruses.html">产品</a><br>
+                                <a href="shops.html">线下门店</a><br>
+                                <a href="news.html">新闻</a><br>
+                                <a href="about.html">关于我们</a><br>
+                                <a href="joinwe.html">加入我们</a><br>
+                                <a href="massesonlin.html">联系我们</a><br>
+                            </div>
+                        </div>
+                    </div>
+        <!--  -->
+        <div class="new-tit">
+                <span class="wdc">CONTACT US</span> <span class="erdd ffeddww"> 联系我们</span>
+            </div>
+            <p class="agjjejw">
+                <span class="erde fjrhja">全国免费热线</span><br>
+                <span class="sand">王女士:13394965505</span>
+            </p>
+                    
+<!--百度地图容器-->
+<div class="fgshhfghys" id="dituContent"></div>
+
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(87.267384,44.021874);//定义一个中心点坐标
+        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_SMALL});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"昌吉友好购物中心12栋24楼",content:"我的备注",point:"87.267119|44.021868",isOpen:1,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+    <p class="gijpjg">
+        <img src="http://www.leagel.cn/template/default/images/contcat-add.png" alt="">
+        <span class="gfdgghh">公司地址：</span> <span> 新疆维吾尔自治区昌吉市长宁南路晶彩城4号楼</span>
+    </p>
+
+    <div class="liuyan">
+         <p class="sand tc fsgg">
+                FEEDBACK
+         </p>
+          <p class="erde tc ghahy">※ 请留下您的联系方式,我们的工作人员会在第一时间处理您的问题.</p>
+         
+          <form action="liuygran" class="liuygran">
+            <div class="tyjtyhrt">
+                <label class="hehtryr" for="" >用户名</label>
+                <div class="joijwwfgh"><input type="text" placeholder="请输入用户名"></div>
+            </div>
+            <div class="tyjtyhrt" >
+                    <label class="hehtryr" for="" >E-MAIL</label>
+                    <div class="joijwwfgh"><input type="text" placeholder="请输入您的邮箱" ></div>
+                </div>
+                <div class="tyjtyhrt">
+                        <label class="hehtryr" for="">电话 </label>
+                        <div class="joijwwfgh"><input type="text" placeholder="请输入您的电话"></div>
+                    </div>
+                    <div class="tyjtyhrt">
+                            <label class="hehtryr" for="">地址</label>
+                            <div class="joijwwfgh"><input type="text" placeholder="请填写您的地址"></div>
+                        </div>
+
+
+                        <div class="ghehyr">
+                                <label class="hehtryfdr" for="">内容</label>
+                                <div class="ffsaeh"><textarea class="gregrwh" placeholder="谢谢您的反馈"></textarea></div>
+                            </div>
+
+                            <div class="jopjopi">
+                                <button class="ghjjkjk">确认提交</button>
+                                <div class="disibt"><input type="text" placeholder="请输入验证码"></div> 
+                                <div class="gasghhj">
+                                    <img src="http://www.leagel.cn/code.php?id=1538204611516" alt="">
+                                </div>
+                            </div>
+
+          </form>
+        </div>
+
+
+
+
+        
+        <div class="footer">
+                <span> <img src="http://www.leagel.cn/template/default/images/share-to.png" alt=""></span>
+                <a class="fefwq" href="#"> </a>
+                <a class="fefwq1" href="#"> </a>
+                <a class="fefwq2" href="#"> </a>
+                <a class="fefwq3" href="#"> </a>
+                <div class="fewfgh">
+                     2017© 新疆图兰简芮服饰连锁加盟店-BY Sihaiy
+                </div>
+            </div>
+                </section>
+            </div>
+    
+    
+</body>
+<script src="../js/tongy.js"></script>
+</html>

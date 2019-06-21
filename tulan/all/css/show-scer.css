@@ -1,0 +1,38 @@
+@media screen and (max-width: 980px) { 
+    
+    aside{
+        display: none;
+    }
+    section{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .navtop{display: block;}
+    
+    }  
+    @media screen and (max-width: 720px) { 
+        
+        .befor, .after{
+            display: none;
+        }
+        .xiuc{
+            width: 100%;
+        }
+        .videobox{
+            padding: 0px;
+        }
+        
+        .fewfgh{
+            
+                display: block;
+                float: none;
+                margin: 10px 0px;
+                font-size: 12px;
+            
+        }
+     }  
+        @media screen and (max-width: 440px) { 
+        
+         
+                
+                }     

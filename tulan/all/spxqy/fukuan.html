@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0px;padding: 0px}
+        .gc_title{
+            text-align: center;
+            margin: 20px;
+            font-size: 26px;
+        }
+        .xq_wrap{
+            width: 100%;
+           margin: 10px auto;
+            position: relative; 
+           
+        }
+        .xq_wrap img{
+            width: 10%;
+        }
+        .xqfs18{
+            font-size: 26px;
+            font-weight: bold;
+            margin: 7px 0px;
+            display: inline-block;
+            position: absolute;
+            top: 10%;
+            left: 15%;
+        }
+        .xq-more{
+            display: inline-block;
+            position: absolute;
+            top: 45%;
+            left: 15%;
+            font-size: 24px;
+        }
+    
+        .xaqred{
+            color: red;
+            /* margin: 0px 20px; */
+            /* font-size: 18px; */
+        }
+        .fweioow{
+            font-size: 24px;
+            font-weight: bold;
+            /* position: absolute;
+            right: 20%; */
+            margin: 0px 20px;
+        }
+        .agjoiwwe{
+            position: absolute;
+            top: 70%;
+            left: 15%;
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+        }
+        .dfadseree{
+            position: absolute;
+            top: 45%;
+            font-size: 18px;
+            right:10% ;
+            left: 82%;
+        }
+        .dooppepres{
+            position: absolute;
+            width: 6%;
+            height: 40px;
+            font-size: 22px;
+            top: 75%;
+            right: 5%;
+            background: black;
+            color: gold;
+            border: none;
+          
+        }
+
+        /*  */
+        .dooppepreds{
+            color: green;
+            font-size: 26px;
+        }
+        .dizhi{
+            padding: 10px;
+            border-bottom: 1px solid black;
+            font-size: 22px
+        }
+        .all{
+            width: 80%;
+            margin: 0px auto;
+            border: 1px solid black;
+            padding: 40px 20px;
+            padding-bottom: 60px;
+        }
+        .wodedz{
+            text-indent: 4rem;
+            font-size: 18px;
+            line-height: 60px;
+        }
+        .jiesuan{
+            border-top: 1px solid black;
+            padding: 10px 50px;
+            text-align: right;
+            font-size: 22px;
+            position: relative;
+        
+        }
+        .dgfgegtwww{
+            width: 100px;
+            height: 40px;
+            background: black;
+            color: gold;
+            border: none;
+            font-size: 24px;
+           position: absolute;
+           right: 50px;
+           bottom: -50px
+        }
+        .dgfgegtwwv{
+            width: 100px;
+            height: 40px;
+            background: rgb(231, 231, 231);
+            color: rgb(15, 15, 15);
+            border: none;
+            font-size: 24px;
+           position: absolute;
+           right: 180px;
+           bottom: -50px
+        }
+        .yifu{
+            color: green;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+            <div class="dizhi">
+                    <span>当前地址:</span>
+                    <p class="wodedz">第三方副驾驶的合法is会发生覅收到后发生的合法结婚</p>
+                </div>
+                <div class="xq_wrap">
+                        <div class="imgkkkkxq">
+                                <img src="http://www.leagel.cn/upload/20180228/20180228142020.jpg" alt=""  class="ijoowengsd">
+                        </div>
+                    <p class="xqfs18 ijoowengsd">这里是商品标题</p>
+                    <!-- 这里是商品图 -->
+                    
+                   
+                    <p class="xq-more">
+                        <!-- 颜色 -->
+                        颜色：<span class="gsdfwewews xaqred ijoowengsd"></span>
+                        <!-- 尺码 -->
+                       尺码： <span class="gsdffsdwew xaqred ijoowengsd"></span>
+                        <!-- 数量 -->
+                      
+                    </p >
+                    <!-- time -->
+                    <span class="agjoiwwe">
+                            创建时间：<span class="xaqred ijoowengsd"></span>
+                    </span>
+                    <!-- 价格 -->
+                    <span class="dfadseree">
+                            单价：<span class="xaqred ijoowengsd"></span>
+                    </span>
+                    <p class="dooppepreds"></p>
+                </div>
+                <div class="jiesuan">
+                   共<span class="ijoowengsd xaqred"></span>件商品, 合计: <span  class="ijoowengsd xaqred"></span>
+                   <button class="ijoowengsd dgfgegtwww">结算</button>
+                   <button class="ijoowengsd dgfgegtwwv">再想想</button>
+                   <div class="yifu">付款成功</div>
+                </div>
+              
+    </div>
+   
+</body>
+    <script>
+
+var test = window.location.href;
+  var dds=test.split("?");
+    var index= dds[1].split("=")[1]
+
+
+        var ijoowengsd = document.getElementsByClassName("ijoowengsd")
+        var user =  JSON.parse(localStorage.userl)
+        var num = parseInt(localStorage.nowuseing)
+        var shangpin = JSON.parse(localStorage.shangping)
+
+
+        var wodedz = document.getElementsByClassName("wodedz")[0]
+        wodedz.innerText = user[num].more[3]
+        
+            ijoowengsd[1].innerText = shangpin[user[num].dingdan[index].id].title
+            ijoowengsd[0].src =shangpin[user[num].dingdan[index].id].pic
+            ijoowengsd[2].innerText  = user[num].dingdan[index].color
+            ijoowengsd[3].innerText  = user[num].dingdan[index].size
+            ijoowengsd[4].innerText  = user[num].dingdan[index].time
+            ijoowengsd[5].innerText =shangpin[user[num].dingdan[index].id].manay
+            ijoowengsd[6].innerText =user[num].dingdan[index].num
+            ijoowengsd[7].innerText =user[num].dingdan[index].jiage
+            
+
+
+            if(user[num].dingdan[index].zhuangt == "付款成功"){
+        ijoowengsd[8].style = "display:none"
+    var yifu = document.getElementsByClassName("yifu")[0];
+    yifu.style = "display:block"
+    ijoowengsd[9].style = "display:none"
+    }
+// 结算
+ijoowengsd[9].onclick = function () {
+    alert("订单已保存，请尽快付款")
+    window.location.href = document.referrer;
+    window.history.back(-1);
+}
+    
+
+ijoowengsd[8].onclick = function () {
+    var fukuan = parseInt(ijoowengsd[7].innerText)
+    if(user[num].zongbi < fukuan){
+        alert("余额不足，请充值")
+    }else{
+
+    var useer = user[num].zongbi - fukuan
+   user[num].zongbi = useer
+   user[num].dingdan[index].zhuangt = "付款成功"
+    localStorage.userl = JSON.stringify(user)
+    alert("付款成功，已成功扣除"+ fukuan+"RMB")
+    ijoowengsd[8].style = "display:none"
+    var yifu = document.getElementsByClassName("yifu")[0];
+    yifu.style = "display:block"
+    ijoowengsd[9].style = "display:none"
+    }
+
+    setTimeout(function(){
+        window.location.href = document.referrer;
+    window.history.back(-1);
+    },1500)
+}
+    </script>
+</html>

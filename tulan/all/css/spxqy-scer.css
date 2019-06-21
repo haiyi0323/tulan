@@ -1,0 +1,63 @@
+@media screen and (max-width: 980px) { 
+    
+    aside{
+        display: none;
+    }
+    section{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .navtop{display: block;}
+    
+    }  
+    @media screen and (max-width: 720px) { 
+        
+       
+        .fewfgh{
+            
+                display: block;
+                float: none;
+                margin: 10px 0px;
+                font-size: 12px;
+            
+        }
+     }  
+        @media screen and (max-width: 440px) { 
+        .spxqy-lunbo{
+            width: 100%
+        }
+        .spxqy-img{
+            width: 100%;
+            padding: 0px;
+        }
+        .spxqy-img{background: none;}
+         .jiofuusjjee{
+             font-size: 18px;text-align: left;
+         }
+        .spxqy-lunbo ol li{
+            border: none;
+        }     
+        .spxqy-lunbo ol{
+            top: 5px;
+        }
+        .spxqy-lunbo ol li{
+            width: calc(20% - 22px);
+            float: left;
+            background: white;
+            padding: 10px;
+            overflow: hidden;
+          
+        }
+        .xqygmsx{width: 100%}
+        .spxqy-cs{
+            background: none;
+        }
+        .jijowpppeoooeir{margin:0px}
+        .pinglunss{width: 65%}
+        .hoioirobhi{font-size: 16px}
+        .pinglunss p{line-height: 20px}
+        .fpioiornrjnjin{font-size: 12px}
+        .spxqy-pl ul li{margin: 10px; padding: 10px;}
+        .pinglun-user{width: 25% ; margin: 5px}
+        .jijowpppeoooeir{text-align: left;}
+                }     
